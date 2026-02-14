@@ -507,6 +507,80 @@ body {
   scrollbar-width: none;  /* Firefox */
 }
 
+/* Image Optimization Techniques */
+img {
+  max-width: 100%;
+  height: auto;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+/* Optimize images for different screen densities */
+@media (-webkit-min-device-pixel-ratio: 1.5),
+       (min-resolution: 144dpi) {
+  img {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
+}
+
+/* Lazy loading placeholder */
+img[data-src] {
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+img.loaded {
+  opacity: 1;
+}
+
+/* Image quality optimization */
+.image-sharp {
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: -o-pixelated;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  img {
+    transition: none;
+  }
+}
+
+/* Optimized image containers */
+.image-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.image-container img {
+  transition: transform 0.3s ease;
+}
+
+.image-container:hover img {
+  transform: scale(1.03);
+}
+
+/* Background image optimization */
+.bg-cover {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Optimize for print */
+@media print {
+  img {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+}
+
 /* Common utility classes */
 .text-soft {
   color: #5A6655;
