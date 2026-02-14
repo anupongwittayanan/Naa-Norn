@@ -36,13 +36,13 @@
         }
     </script>
 </head>
-<body class="bg-background-light dark:bg-background-dark text-text-main dark:text-white antialiased transition-colors duration-200">
-<div class="relative flex min-h-screen w-full flex-col mx-auto max-w-wide bg-cream-accent dark:bg-background-dark shadow-xl overflow-hidden">
+<body class="bg-background-light dark:bg-background-dark font-display antialiased text-text-main dark:text-white overflow-hidden h-screen flex flex-col">
+<div class="flex-1 overflow-y-auto no-scrollbar relative flex flex-col w-full max-w-wide mx-auto pb-24">
 <!-- Header -->
-<header class="sticky top-0 z-10 bg-cream-accent/90 dark:bg-background-dark/90 backdrop-blur-md border-b border-beige-border dark:border-white/10 px-4 py-3 flex items-center justify-center">
-<h1 class="text-lg font-bold text-center text-text-main dark:text-white tracking-tight truncate">
-กฎระเบียบและข้อตกลง
-</h1>
+<header class="sticky top-0 z-50 bg-background-light/90 dark:bg-background-dark/90 backdrop-blur-md border-b border-sand/30 dark:border-white/10">
+<div class="flex items-center justify-center px-4 py-3 max-w-wide mx-auto">
+<h1 class="text-lg font-bold text-text-main dark:text-white truncate">กฎระเบียบและข้อตกลง</h1>
+</div>
 </header>
 
 <!-- Navigation Bar -->
@@ -64,8 +64,8 @@
 </div>
 </div>
 </nav>
-<!-- Main Content Scroll Area -->
-<main class="flex-1 overflow-y-auto pb-24 hide-scrollbar">
+<!-- Main Content Area (Scrollable) -->
+<main class="flex-1 overflow-y-auto no-scrollbar relative flex flex-col w-full max-w-wide mx-auto pb-24">
 <!-- Hero Image / Visual Hook -->
 <div class="w-full h-48 relative">
 <div class="absolute inset-0 bg-gradient-to-b from-transparent to-cream-accent dark:to-background-dark z-10"></div>
@@ -161,15 +161,13 @@
 * A security deposit of 5,000 THB is required upon arrival for incidentals. This deposit is fully refundable upon check-out and subject to a damage inspection of the accommodation.
 </p>
 </div>
-</div>
-<!-- Bottom CTA -->
-<div class="pb-4 bg-white/95 dark:bg-background-dark/95 border-t border-beige-border dark:border-white/10 mx-auto max-w-wide">
-<a href="https://lin.ee/xsPWWMG" class="w-full bg-primary hover:bg-primary-dark text-white font-bold py-4 px-6 rounded-xl shadow-lg shadow-primary/30 transition-all active:scale-[0.98] flex items-center justify-center gap-2">
-<span>ทักไลน์เพื่อจองที่พัก</span>
-<span class="material-symbols-outlined text-lg">arrow_forward</span>
-</a>
-</div>
 </main>
+<!-- Bottom Fixed CTA Bar -->
+<div class="flex-none bg-cream border-t border-sand/30 dark:border-white/10 p-4 safe-area-pb">
+<a href="https://lin.ee/xsPWWMG" class="w-full bg-primary hover:bg-primary-dark text-white font-bold text-base py-3.5 px-6 rounded-xl shadow-lg shadow-primary/20 flex items-center justify-center gap-2 transition-all active:scale-[0.98]">
+<span class="material-symbols-outlined">chat</span>
+ทักไลน์เพื่อจองที่พัก
+</a>
 </div>
 <script src="script.js"></script>
 </body>

@@ -36,8 +36,8 @@
         }
     </script>
 </head>
-<body class="bg-background-light dark:bg-background-dark text-text-main dark:text-white pb-24">
-<!-- Sticky Header -->
+<body class="bg-background-light dark:bg-background-dark font-display antialiased text-text-main dark:text-white overflow-hidden h-screen flex flex-col">
+<!-- Header -->
 <header class="sticky top-0 z-50 bg-background-light/90 dark:bg-background-dark/90 backdrop-blur-md border-b border-sand/30 dark:border-white/10">
 <div class="flex items-center justify-center px-4 py-3 max-w-wide mx-auto">
 <h1 class="text-lg font-bold text-text-main dark:text-white truncate">น่านอน พูลวิลล่า สระบุรี</h1>
@@ -65,6 +65,7 @@
 </nav>
 
 <!-- Hero Section -->
+<main class="flex-1 overflow-y-auto no-scrollbar relative flex flex-col w-full max-w-wide mx-auto pb-24">
 <div class="max-w-wide mx-auto relative group">
 <div class="relative w-full aspect-[4/5] overflow-hidden bg-gray-200">
 <img alt="Luxury pool villa exterior with swimming pool and modern architecture" class="w-full h-full object-cover" data-alt="Luxury pool villa exterior with swimming pool and modern architecture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKkPD3684VBIZY9G1C63Wmcn07b1r-EOnlWjfLv__7-jf-mZjsPvG2lvPL17onEV46VjvOyn8C6OZvLBzbsyVk73GDbuvvKouMyOyPOvBcfmrKzRorO5yP7G4SEwq-uJIFNidUNeOkaNuILgue0kBE7JaNF1o0O3XTZciXqlaPfuPcIpi5KXFee7b_RcVb8g3gMaLMlbOF6axwNGpCbX7LAWoEE4gCp3v_b9FR6KSLixclcuEijLHs_JrzEmlvP7e8fmZIKvveZAk=s1024-c-rw-no"/>
@@ -324,7 +325,12 @@
 </div>
 </div>
 
-<!-- Footer -->
+<div class="flex-none bg-cream border-t border-sand/30 dark:border-white/10 p-4 safe-area-pb">
+<a href="https://lin.ee/xsPWWMG" class="w-full bg-primary hover:bg-primary-dark text-white font-bold text-base py-3.5 px-6 rounded-xl shadow-lg shadow-primary/20 flex items-center justify-center gap-2 transition-all active:scale-[0.98]">
+<span class="material-symbols-outlined">chat</span>
+ทักไลน์เพื่อจองที่พัก
+</a>
+</div>
 <footer class="bg-background-dark text-white pt-10 pb-28">
 <div class="max-w-wide mx-auto px-6">
 <div class="mb-8">
@@ -358,30 +364,15 @@
 © 2025 Naa-Norn Pool Villa. All rights reserved.
 </div>
 </div>
-</footer>
-
-<!-- Floating Sticky Bottom Bar (Mobile Primary Action) -->
-<div class="fixed bottom-0 left-0 right-0 p-4 bg-white/80 dark:bg-background-dark/80 backdrop-blur-lg border-t border-sand/30 dark:border-white/10 z-50">
-<div class="max-w-wide mx-auto flex items-center justify-between gap-4">
-<div class="flex flex-col">
-<span class="text-xs text-text-soft dark:text-gray-400">ราคาเริ่มต้น</span>
-<span class="text-xl font-bold text-primary-dark">฿9,900<span class="text-sm font-normal text-text-main dark:text-gray-300">/คืน</span></span>
-</div>
-<a href="https://lin.ee/xsPWWMG">
-<button class="flex-1 bg-[#06C755] hover:bg-[#05b54d] text-white font-bold py-3 px-4 rounded-xl shadow-lg shadow-green-500/20 flex items-center justify-center gap-2">
-<span class="material-symbols-outlined">chat</span>
-จองผ่าน LINE
-</button>
-</a>
-</div>
-</div>
-
+</main>
 <!-- Floating LINE Button (Optional additional FAB if user scrolls) -->
 <a class="fixed bottom-24 right-4 z-40 bg-[#06C755] text-white p-3 rounded-full shadow-lg shadow-green-900/20 hover:scale-110 transition-transform animate-bounce" href="https://lin.ee/xsPWWMG">
 <svg fill="currentColor" height="24" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
 <path d="M22 10.5C22 5.25 17.5 1 12 1C6.5 1 2 5.25 2 10.5C2 15.19 5.24 19.16 9.51 19.83C9.37 20.35 8.95 21.84 8.7 22.45C8.48 23.01 9.09 23.29 9.52 23.06C11.66 21.9 14.59 20.27 15.35 19.79C15.46 19.73 15.58 19.69 15.69 19.7C19.34 19.5 22 15.37 22 10.5ZM8.6 13.11H6.18C5.92 13.11 5.71 12.9 5.71 12.64V8.36C5.71 8.1 5.92 7.89 6.18 7.89H8.6C8.86 7.89 9.07 8.1 9.07 8.36V12.64C9.07 12.9 8.86 13.11 8.6 13.11ZM10.5 8.36C10.5 8.1 10.71 7.89 10.97 7.89H12.03C12.29 7.89 12.5 8.1 12.5 8.36V12.64C12.5 12.9 12.29 13.11 12.03 13.11H10.97C10.71 13.11 10.5 12.9 10.5 12.64V8.36ZM17.82 12.87C17.69 13.04 17.48 13.11 17.29 13.11H14.4C14.14 13.11 13.93 12.9 13.93 12.64V8.36C13.93 8.1 14.14 7.89 14.4 7.89H17.29C17.55 7.89 17.76 8.1 17.76 8.36C17.76 8.62 17.55 8.83 17.29 8.83H15.92V9.89H17.29C17.55 9.89 17.76 10.1 17.76 10.36C17.76 10.62 17.55 10.83 17.29 10.83H15.92V12.06L17.59 12.05C17.8 12.05 17.98 12.18 18.04 12.38C18.1 12.58 18.02 12.79 17.82 12.87Z"></path>
 </svg>
 </a>
+</footer>
+
 <script src="script.js"></script>
 </body>
 </html>
